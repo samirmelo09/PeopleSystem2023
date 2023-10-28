@@ -1,12 +1,15 @@
 package br.samirmelo.tech.pessoas;
 
+import br.samirmelo.tech.composicao.Endereco;
+import br.samirmelo.tech.composicao.TelsContato;
+
 public class Pessoa {
 	private String nome;
 	private String dataNascimento;
-	private String endereco;
-	private String telsContato;
+	private Endereco endereco;
+	private TelsContato telsContato;
 	
-	public void cadastrar(String nome, String dataNascimento, String endereco, String telsContato) {
+	public void cadastrar(String nome, String dataNascimento, Endereco endereco, TelsContato telsContato) {
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
 		this.endereco = endereco;
@@ -18,7 +21,7 @@ public class Pessoa {
 		return idade;
 		
 				
-	// generate get and set
+	// generate getters and setters
 	}
 	public String getNome() {
 		return nome;
@@ -32,16 +35,16 @@ public class Pessoa {
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-	public String getEndereco() {
+	public Endereco getEndereco() {
 		return endereco;
 	}
-	public void setEndereco(String endereco) {
+	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
-	public String getTelsContato() {
+	public TelsContato getTelsContato() {
 		return telsContato;
 	}
-	public void setTelsContato(String telsContato) {
+	public void setTelsContato(TelsContato telsContato) {
 		this.telsContato = telsContato;
 	}
 

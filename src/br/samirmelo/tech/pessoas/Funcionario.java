@@ -2,11 +2,15 @@
 
 package br.samirmelo.tech.pessoas;
 
+import br.samirmelo.tech.composicao.Cargo;
+import br.samirmelo.tech.composicao.Endereco;
+import br.samirmelo.tech.composicao.TelsContato;
+
 //ATRIBUTO
 
 public class Funcionario extends Pessoa{
 	private int matricula;
-	private String cargo;
+	private Cargo cargo;
 	private double salario;
 	private String dataAdmissao;
 		
@@ -14,7 +18,7 @@ public class Funcionario extends Pessoa{
 	
 	            //MÉTODO
 	
-	public void cadastrar( int matricula, String cargo, double salario, String dataAdmissao, String nome, String dataNascimento, String endereco, String telsContato) {
+	public void cadastrar( int matricula, Cargo cargo, double salario, String dataAdmissao, String nome, String dataNascimento, Endereco endereco, TelsContato telsContato) {
 		this.matricula = matricula;
 		this.cargo = cargo;
 		this.salario = salario;
@@ -29,7 +33,7 @@ public class Funcionario extends Pessoa{
 		this.salario = this.salario * percentual;
 	}
 		
-	public void promover(String novoCargo) {
+	public void promover(Cargo novoCargo) {
 		this.cargo = novoCargo;
 	}
 	public int getMatricula() {
@@ -44,7 +48,7 @@ public class Funcionario extends Pessoa{
 	public void setDataAdmissao(String dataAdmissao) {
 		this.dataAdmissao = dataAdmissao;
 	}
-	public String getCargo() {
+	public Cargo getCargo() {
 		return cargo;
 	}
 	public double getSalario() {
